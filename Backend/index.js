@@ -11,7 +11,7 @@ const port = 3000;
 app.use(cors(
   {
     origin: ["https://wordtopdf-1whq.vercel.app"],
-    methods: ["POST"],
+    methods: ["POST", "GET"],
     credentials: true
   }
 ));
