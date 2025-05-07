@@ -8,7 +8,13 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://wordtopdf-1whq.vercel.app"],
+    methods: ["POST"],
+    credentials: true
+  }
+));
 
 //setting up the file storage
 const storage = multer.diskStorage({
